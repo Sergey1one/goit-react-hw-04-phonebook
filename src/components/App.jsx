@@ -14,7 +14,7 @@ import { FormContact } from "./Form/Form";
 
 
 export function App(){
-  const [contacts, setContacts] = useState(  JSON.parse(window.localStorage.getItem('contacts')) ?? [] )
+  const [contacts, setContacts] = useState(()=>{return JSON.parse(window.localStorage.getItem('contacts')) ?? []}   )
   const [filter,setFilter]=useState('')
 
   useEffect(() => { 
