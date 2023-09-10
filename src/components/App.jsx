@@ -39,9 +39,9 @@ export function App(){
     else if (!/\d{3}[-]\d{2}[-]\d{2}/g.test(number)) {
         toast.error('💩 Enter the correct number phone!');
     }
-    else if (!/^[a-zA-Zа-яёА-ЯЁ\s\-]+$/.test(name)) {
-       toast.error('💩 Enter the correct name!');
-      }
+    // else if (!/^[a-zA-Zа-яёА-ЯЁ\s\-]+$/.test(name)) {
+    //    toast.error('💩 Enter the correct name!');
+    //   }
     else {
       const contact = { id:nanoid(), name, number };
     setContacts(prevContacts => [contact, ...prevContacts])
